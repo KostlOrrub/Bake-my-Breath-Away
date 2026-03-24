@@ -1,0 +1,176 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi811gkv6mc2n"]
+
+[ext_resource type="PackedScene" uid="uid://bmlxrlu05d0lc" path="res://Scenes/Proto_Controller.tscn" id="1_r150o"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_idj7w"]
+sky_material = SubResource("ProceduralSkyMaterial_r150o")
+
+[sub_resource type="Environment" id="Environment_kln2b"]
+background_mode = 2
+sky = SubResource("Sky_idj7w")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kln2b")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.817196, -0.243077, 0.522594, 0.28669, 0.615153, 0.734435, -0.5, 0.75, -0.433013, 25.3094, 18.0248, 0)
+shadow_enabled = true
+
+[node name="CSG_Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(14.4512, 0, 0, 0, 0.33664, 0, 0, 0, 18.9771, 21.1958, 0, 0)
+use_collision = true
+size = Vector3(4.37384, 1, 1)
+
+[node name="CSG_Front_wall" type="CSGBox3D" parent="."]
+transform = Transform3D(0.0121551, 0.296356, 0.0303605, -3.90348, 0.000912822, 0.190815, 0.056316, -0.000693801, 13.2196, -6.09323, 2.92989, -2.73843)
+use_collision = true
+size = Vector3(1.47314, 1, 0.978516)
+
+[node name="window" type="CSGBox3D" parent="CSG_Front_wall"]
+transform = Transform3D(0.999893, -2.84457e-05, 0.0708091, 0.00543617, 0.999995, -0.152174, -0.00293864, 3.6103e-05, 0.999888, 0.434466, 2.06753, 0.313732)
+operation = 2
+size = Vector3(0.790192, 10.1455, 0.191895)
+
+[node name="window2" type="CSGBox3D" parent="CSG_Front_wall"]
+transform = Transform3D(1.00018, -3.09519e-05, 0.0708112, 0.00543839, 1.08804, -0.152181, -0.0029395, 3.9282e-05, 0.999909, -0.123023, 0.479683, -0.369407)
+operation = 2
+size = Vector3(0.935852, 4.90137, 0.115612)
+
+[node name="window3" type="CSGBox3D" parent="CSG_Front_wall"]
+transform = Transform3D(1.00018, -3.09519e-05, 0.0708112, 0.00543841, 1.08804, -0.152181, -0.0029395, 3.9282e-05, 0.999908, -0.104952, 0.441921, -0.0087173)
+operation = 2
+size = Vector3(0.935852, 4.90137, 0.115612)
+
+[node name="window4" type="CSGBox3D" parent="CSG_Front_wall"]
+transform = Transform3D(1.00018, -3.09519e-05, 0.0708111, 0.00543841, 1.08804, -0.152181, -0.0029395, 3.9282e-05, 0.999907, -0.117653, 0.469946, -0.188067)
+operation = 2
+size = Vector3(0.935852, 4.90137, 0.115612)
+
+[node name="CSG_Back_Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(0.0122136, 0.322218, 0.0442138, -3.92227, 0.000992481, 0.277882, 0.0565871, -0.000754346, 19.2516, 19.964, 2.89981, -0.0295451)
+use_collision = true
+size = Vector3(1.47314, 1, 0.978516)
+
+[node name="window6" type="CSGBox3D" parent="CSG_Back_Wall"]
+transform = Transform3D(0.99988, -2.84473e-05, 0.0708079, 0.00543648, 0.999986, -0.152172, -0.00293861, 3.61028e-05, 0.999864, 0.420527, -0.502556, -0.121206)
+operation = 2
+size = Vector3(0.739899, 10.1455, 0.10968)
+
+[node name="CSG_Back_Wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.0122136, 0.322218, 0.0442138, -3.92227, 0.000992481, 0.277882, 0.0565871, -0.000754346, 19.2516, 2.23732, 2.89981, -0.0295451)
+use_collision = true
+size = Vector3(1.47314, 1, 0.978516)
+
+[node name="window5" type="CSGBox3D" parent="CSG_Back_Wall2"]
+transform = Transform3D(0.99988, -2.84473e-05, 0.070808, 0.00543649, 0.999987, -0.152173, -0.00293861, 3.61028e-05, 0.999864, 0.4209, 1.92994, -0.123937)
+operation = 2
+size = Vector3(0.739899, 10.1455, 0.10968)
+
+[node name="CSG_Right_Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.0164204, 0.00291969, -20.9436, -3.92085, 0.00986534, 0.0945118, 0.13097, 0.295705, 0.203637, 11.2734, 2.87247, 9.32199)
+use_collision = true
+size = Vector3(1.47314, 1, 0.841965)
+
+[node name="CSG_Left_outerwall" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.0164143, 0.00292223, -19.2486, -3.91941, 0.00987392, 0.0868627, 0.130922, 0.295962, 0.187156, -2.49106, 2.86351, 3.77402)
+use_collision = true
+size = Vector3(1.47314, 1, 0.368816)
+
+[node name="CSG_Left_Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.0164204, 0.00291969, -20.9436, -3.92085, 0.00986534, 0.0945118, 0.13097, 0.295705, 0.203637, 7.32314, 2.88885, -9.27509)
+use_collision = true
+size = Vector3(1.47314, 1, 1.23671)
+
+[node name="Frssezer_wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.131307, 0.32201, 0.187317, -3.93093, 0.0107429, 0.0869371, 0.0164626, -0.00317943, 19.2651, 11.2718, 2.90105, -7.09136)
+use_collision = true
+size = Vector3(1.47314, 1, 0.242618)
+
+[node name="Divider" type="CSGBox3D" parent="."]
+transform = Transform3D(0.131307, 0.32201, 0.187317, -3.93093, 0.0107429, 0.0869371, 0.0164626, -0.00317943, 19.2651, 10.3381, 2.8873, 5.03469)
+use_collision = true
+size = Vector3(1.47314, 1, 0.44974)
+
+[node name="Canopy" type="CSGBox3D" parent="."]
+transform = Transform3D(-3.8202, 0.0669143, 0, -0.886108, -0.288482, 0, 0, 0, 13.2204, -7.05341, 5.61442, -2.51399)
+use_collision = true
+size = Vector3(0.590576, 1, 0.957535)
+
+[node name="Sign" type="CSGCylinder3D" parent="."]
+transform = Transform3D(5.22348e-08, -0.151547, 1.68648e-15, 1.73548, 2.79991e-09, 0.592497, -0.245172, -3.95545e-10, 4.19406, -6.48704, 4.20813, 1.16865)
+use_collision = true
+
+[node name="Frssezer_wall" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.0164204, 0.00291969, -20.9436, -3.92085, 0.00986534, 0.0945118, 0.13097, 0.295705, 0.203637, 6.63577, 2.8917, -4.63096)
+use_collision = true
+size = Vector3(1.47314, 1, 0.436069)
+
+[node name="Freezer door" type="CSGBox3D" parent="Frssezer_wall"]
+transform = Transform3D(0.999396, -0.000579508, 0.163868, -0.441063, 0.00998391, 64.9605, -0.00163036, -0.0153828, 0.0097223, 0.3992, -0.63021, -0.0322706)
+operation = 2
+size = Vector3(0.739899, 10.1455, 0.10968)
+
+[node name="front_counter" type="CSGBox3D" parent="."]
+transform = Transform3D(1.08806, 0, 0, 0, 1, 0, 0, 0, 1, -1.00923, 0.642865, -1.05297)
+use_collision = true
+size = Vector3(1, 1, 10.0904)
+
+[node name="Box_table" type="CSGBox3D" parent="."]
+transform = Transform3D(1.08806, 0, 0, 0, 1, 0, 0, 0, 1, 3.46617, 0.642865, 4.96608)
+use_collision = true
+size = Vector3(1.85999, 1, 8.78524)
+
+[node name="Fro_table" type="CSGBox3D" parent="."]
+transform = Transform3D(1.08806, 0, 0, 0, 1, 0, 0, 0, 1, 18.955, 0.642865, 5.07488)
+use_collision = true
+size = Vector3(1.85999, 1, 8.56765)
+
+[node name="Dumposter" type="CSGBox3D" parent="."]
+transform = Transform3D(0.932653, 0.010556, -0.477087, -0.0148574, 1.00083, -0.00271359, 0.537011, 0.00935661, 0.828505, 51.5613, 1.41322, 5.82171)
+use_collision = true
+size = Vector3(2.77628, 2.52533, 5.318)
+
+[node name="w5" type="CSGBox3D" parent="."]
+transform = Transform3D(1.08806, 0, 0, 0, 1, 0, 0, 0, 1, 11.6845, 0.642865, 5.07488)
+use_collision = true
+size = Vector3(1.85999, 1, 8.56765)
+
+[node name="sink" type="CSGBox3D" parent="."]
+transform = Transform3D(1.08806, 0, 0, 0, 1, 0, 0, 0, 1, 12.3311, 0.642865, -7.1527)
+use_collision = true
+size = Vector3(1.85999, 1, 4.92884)
+
+[node name="Dish rack" type="CSGBox3D" parent="."]
+transform = Transform3D(-1.08806, 0, 8.74228e-08, 0, 1, 0, -9.51216e-08, 0, -1, 19.3107, 2.13499, -6.79161)
+use_collision = true
+size = Vector3(0.902649, 3.98425, 5.0329)
+
+[node name="w4" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1.08806, 0, 1, 0, -1, 0, -4.75608e-08, 14.2826, 0.642865, 8.22828)
+use_collision = true
+size = Vector3(1.85999, 1, 6.66947)
+
+[node name="hinge" type="CSGBox3D" parent="."]
+transform = Transform3D(1.08806, 0, 0, 0, 1, 0, 0, 0, 1, -1.00029, 0.991441, -7.5167)
+use_collision = true
+size = Vector3(1, 0.321411, 2.96919)
+
+[node name="Protocontoller" parent="." instance=ExtResource("1_r150o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 1)
+
+[node name="ProtoController" parent="Protocontoller" index="0"]
+transform = Transform3D(0.115111, 0, -0.993353, 0, 1, 0, 0.993353, 0, 0.115111, -1.14871, 0, 1.59249)
+
+[node name="Camera3D" parent="Protocontoller/ProtoController/Head" index="0"]
+current = true
+
+[editable path="Protocontoller"]
+[editable path="Protocontoller/ProtoController"]
