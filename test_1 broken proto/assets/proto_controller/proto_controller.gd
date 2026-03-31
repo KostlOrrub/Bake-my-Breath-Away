@@ -4,7 +4,7 @@
 # Happy prototyping!
 
 extends CharacterBody3D
-
+var pickedObject
 ## Can we move around?
 @export var can_move : bool = true
 ## Are we affected by gravity?
@@ -20,25 +20,25 @@ extends CharacterBody3D
 ## Look around rotation speed.
 @export var look_speed : float = 0.002
 ## Normal speed.
-@export var base_speed : float = 7.0
+@export var base_speed : float = 5.0
 ## Speed of jump.
-@export var jump_velocity : float = 4.5
+@export var jump_velocity : float = 4.0
 ## How fast do we run?
-@export var sprint_speed : float = 10.0
+@export var sprint_speed : float = 6.5
 ## How fast do we freefly?
 @export var freefly_speed : float = 25.0
 
 @export_group("Input Actions")
 ## Name of Input Action to move Left.
-@export var input_left : String = "ui_left"
+@export var input_left : String = "left"
 ## Name of Input Action to move Right.
-@export var input_right : String = "ui_right"
+@export var input_right : String = "right"
 ## Name of Input Action to move Forward.
-@export var input_forward : String = "ui_up"
+@export var input_forward : String = "up"
 ## Name of Input Action to move Backward.
-@export var input_back : String = "ui_down"
+@export var input_back : String = "_down"
 ## Name of Input Action to Jump.
-@export var input_jump : String = "ui_accept"
+@export var input_jump : String = "jump"
 ## Name of Input Action to Sprint.
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
@@ -52,16 +52,15 @@ var freeflying : bool = false
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
-@onready var raycast = $Head/Camera3D/RayCast3D
-@onready var hand = $Head/hand
-var v = Vector3()
+@onready var raycast= $Head/Camera3D/RayCast3D
+@onready var hand = $Head/Camera3D/hand
 
 func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
-
 func _unhandled_input(event: InputEvent) -> void:
+	
 	# Mouse capturing
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		capture_mouse()
@@ -78,7 +77,21 @@ func _unhandled_input(event: InputEvent) -> void:
 			enable_freefly()
 		else:
 			disable_freefly()
-
+		
+	if event.is_action_pressed("interaction"):
+		print("interaction pressed, pickedObject: ", pickedObject)
+		if pickedObject:
+			pickedObject.freeze = false
+			pickedObject.reparent(get_tree().current_scene)
+			pickedObject = null
+			
+	if event.is_action_pressed("drop"):
+		if pickedObject:
+			pickedObject.freeze = false
+			pickedObject.reparent(get_tree().current_scene)
+			pickedObject = null
+		
+		
 func _physics_process(delta: float) -> void:
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
@@ -118,17 +131,33 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 		velocity.y = 0
 		
-		
-	var object = raycast.get_collider()
 	if raycast.is_colliding():
-		if object.is_in_group("pickable"):
-			if Input.is_action_pressed("Interact"):
-				object.global_position = hand.global_position
-				object.global_rotation = hand.global_rotation
-				object.collision_layer = 2
-				object.linear_velocity = Vector3(0.1, 3, 0.1)
+		var object = raycast.get_collider() 
+		if object.is_in_group("pickable") and Input.is_action_just_pressed("interaction"):
+			if not pickedObject:
+				pick_up_object(object)
+				
+# hardcoded offset in front of camera for testing
+	if pickedObject:
+		var cam = $Head/Camera3D
+		pickedObject.global_position = cam.global_position + (-cam.global_basis.z * 3.0)
+
+		
+	
 	# Use velocity to actually move
 	move_and_slide()
+	
+var can_drop: bool = false
+
+func pick_up_object(object):
+	pickedObject = object
+	print("set pickedObject to: ", pickedObject)
+	object.freeze = true
+	object.reparent(self, true)
+	print("after reparent, pickedObject is: ", pickedObject)
+	
+	
+
 
 
 ## Rotate us to look around.
@@ -188,3 +217,9 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
+
+
+	
+
+	
+	

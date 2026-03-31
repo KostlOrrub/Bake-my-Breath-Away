@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqoihyvb0e0cl"]
+
+[ext_resource type="Script" uid="uid://kdiwb2joxcri" path="res://Scripts/cake.gd" id="1_7y7jt"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vbow6"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7y7jt"]
+height = 0.421814
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Cake" type="CharacterBody3D" parent="."]
+script = ExtResource("1_7y7jt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cake"]
+transform = Transform3D(1, 0, 0, 0, 0.209574, 0, 0, 0, 1, 0, 0.222404, 0)
+mesh = SubResource("CylinderMesh_vbow6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cake"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00162256, 0.22499, 0.00248456)
+shape = SubResource("CylinderShape3D_7y7jt")

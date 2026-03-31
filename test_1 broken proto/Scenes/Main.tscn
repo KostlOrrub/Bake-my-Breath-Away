@@ -1,0 +1,225 @@
+[gd_scene load_steps=9 format=3 uid="uid://bi811gkv6mc2n"]
+
+[ext_resource type="PackedScene" uid="uid://bmlxrlu05d0lc" path="res://Scenes/Proto_Controller.tscn" id="1_r150o"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_idj7w"]
+sky_material = SubResource("ProceduralSkyMaterial_r150o")
+
+[sub_resource type="Environment" id="Environment_kln2b"]
+background_mode = 2
+background_energy_multiplier = 1.17
+sky = SubResource("Sky_idj7w")
+ambient_light_source = 3
+ambient_light_color = Color(0, 0.92549, 0.933333, 1)
+tonemap_mode = 2
+glow_enabled = true
+fog_sun_scatter = 0.17
+volumetric_fog_anisotropy = -0.44
+volumetric_fog_detail_spread = 2.7991
+volumetric_fog_sky_affect = 0.29
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_idj7w"]
+size = Vector3(1, 1.20068, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kln2b"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_r150o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kln2b")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.817196, -0.243077, 0.522594, 0.28669, 0.615153, 0.734435, -0.5, 0.75, -0.433013, 25.3094, 18.0248, 0)
+light_color = Color(1, 1, 0.894118, 1)
+shadow_enabled = true
+
+[node name="Envorement" type="Node3D" parent="."]
+transform = Transform3D(14.4512, 0, 0, 0, 0.33664, 0, 0, 0, 18.9771, 21.1958, 0, 0)
+
+[node name="CSG_Floor" type="CSGBox3D" parent="Envorement"]
+use_collision = true
+collision_mask = 3
+size = Vector3(4.37384, 1, 1)
+
+[node name="CSG_Floor2" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.999995, 0, 0, 0, 0.999993, 0, 0, 0, 0.999996, 0, 0, 1.85693)
+use_collision = true
+collision_mask = 3
+size = Vector3(4.37384, 1, 4.71387)
+
+[node name="CSG_Front_wall" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.000841114, 0.0205074, 0.0021009, -11.5954, 0.00271157, 0.566822, 0.00296758, -3.65599e-05, 0.696608, -1.88836, 8.70333, -0.144302)
+use_collision = true
+collision_layer = 3
+collision_mask = 3
+size = Vector3(1.47314, 1, 0.978516)
+
+[node name="window" type="CSGBox3D" parent="Envorement/CSG_Front_wall"]
+transform = Transform3D(0.999893, -2.84457e-05, 0.0708091, 0.00543617, 0.999995, -0.152174, -0.00293864, 3.6103e-05, 0.999888, 0.434466, 2.06753, 0.313732)
+operation = 2
+size = Vector3(0.790192, 10.1455, 0.191895)
+
+[node name="window2" type="CSGBox3D" parent="Envorement/CSG_Front_wall"]
+transform = Transform3D(1.00018, -3.09519e-05, 0.0708112, 0.00543839, 1.08804, -0.152181, -0.0029395, 3.9282e-05, 0.999909, -0.123023, 0.479683, -0.369407)
+operation = 2
+size = Vector3(0.935852, 4.90137, 0.115612)
+
+[node name="window3" type="CSGBox3D" parent="Envorement/CSG_Front_wall"]
+transform = Transform3D(1.00018, -3.09519e-05, 0.0708112, 0.00543841, 1.08804, -0.152181, -0.0029395, 3.9282e-05, 0.999908, -0.104952, 0.441921, -0.0087173)
+operation = 2
+size = Vector3(0.935852, 4.90137, 0.115612)
+
+[node name="window4" type="CSGBox3D" parent="Envorement/CSG_Front_wall"]
+transform = Transform3D(1.00018, -3.09519e-05, 0.0708111, 0.00543841, 1.08804, -0.152181, -0.0029395, 3.9282e-05, 0.999907, -0.117653, 0.469946, -0.188067)
+operation = 2
+size = Vector3(0.935852, 4.90137, 0.115612)
+
+[node name="CSG_Back_Wall" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.000845162, 0.022297, 0.00305952, -11.6512, 0.0029482, 0.825457, 0.00298186, -3.97503e-05, 1.01446, -0.0852387, 8.61398, -0.00155688)
+use_collision = true
+size = Vector3(1.47314, 1, 0.978516)
+
+[node name="window6" type="CSGBox3D" parent="Envorement/CSG_Back_Wall"]
+transform = Transform3D(0.99988, -2.84473e-05, 0.0708079, 0.00543648, 0.999986, -0.152172, -0.00293861, 3.61028e-05, 0.999864, 0.420527, -0.502556, -0.121206)
+operation = 2
+size = Vector3(0.739899, 10.1455, 0.10968)
+
+[node name="CSG_Back_Wall2" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.000845162, 0.022297, 0.00305952, -11.6512, 0.0029482, 0.825457, 0.00298186, -3.97503e-05, 1.01446, -1.3119, 8.61398, -0.00155688)
+use_collision = true
+size = Vector3(1.47314, 1, 0.978516)
+
+[node name="window5" type="CSGBox3D" parent="Envorement/CSG_Back_Wall2"]
+transform = Transform3D(0.99988, -2.84473e-05, 0.070808, 0.00543649, 0.999987, -0.152173, -0.00293861, 3.61028e-05, 0.999864, 0.4209, 1.92994, -0.123937)
+operation = 2
+size = Vector3(0.739899, 10.1455, 0.10968)
+
+[node name="CSG_Right_Wall" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(-0.00113627, 0.000202038, -1.44926, -11.647, 0.0293053, 0.28075, 0.00690148, 0.0155822, 0.0107307, -0.686614, 8.53276, 0.491223)
+use_collision = true
+size = Vector3(1.47314, 1, 0.841965)
+
+[node name="CSG_Left_outerwall" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(-0.00113584, 0.000202214, -1.33197, -11.6427, 0.0293308, 0.258028, 0.00689895, 0.0155957, 0.0098622, -1.59996, 8.49857, 0.198583)
+use_collision = true
+size = Vector3(1.47314, 1, 0.427572)
+
+[node name="CSG_Left_Wall" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(-0.00113627, 0.000202038, -1.44926, -11.647, 0.0293053, 0.28075, 0.00690148, 0.0155822, 0.0107307, -0.959966, 8.58142, -0.488752)
+use_collision = true
+size = Vector3(1.47314, 1, 1.23671)
+
+[node name="Frssezer_wall2" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.00908624, 0.0222826, 0.012962, -11.677, 0.0319121, 0.258249, 0.000867498, -0.00016754, 1.01518, -0.686725, 8.61766, -0.37368)
+use_collision = true
+size = Vector3(1.47314, 1, 0.242618)
+
+[node name="Divider" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.00908624, 0.0222826, 0.012962, -11.677, 0.0319121, 0.258249, 0.000867498, -0.00016754, 1.01518, -0.751336, 8.57682, 0.265303)
+use_collision = true
+size = Vector3(1.47314, 1, 0.44974)
+
+[node name="Canopy" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(-0.264352, 0.00463036, 0, -2.63221, -0.856945, 0, 0, 0, 0.69665, -1.9548, 16.6778, -0.132475)
+use_collision = true
+size = Vector3(0.590576, 1, 0.957535)
+
+[node name="Sign" type="CSGCylinder3D" parent="Envorement"]
+transform = Transform3D(3.61456e-09, -0.0104868, 1.16702e-16, 5.1553, 8.31722e-09, 1.76003, -0.0129194, -2.08433e-11, 0.221006, -1.91561, 12.5004, 0.0615821)
+use_collision = true
+
+[node name="Frssezer_wall" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(-0.00113627, 0.000202038, -1.44926, -11.647, 0.0293053, 0.28075, 0.00690148, 0.0155822, 0.0107307, -1.00753, 8.58989, -0.244029)
+use_collision = true
+size = Vector3(1.47314, 1, 0.436069)
+
+[node name="Freezer door" type="CSGBox3D" parent="Envorement/Frssezer_wall"]
+transform = Transform3D(0.999396, -0.000579508, 0.163868, -0.441063, 0.00998391, 64.9605, -0.00163036, -0.0153828, 0.0097223, 0.3992, -0.63021, -0.0322706)
+operation = 2
+size = Vector3(0.739899, 10.1455, 0.10968)
+
+[node name="front_counter" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.075292, 0, 0, 0, 2.97053, 0, 0, 0, 0.0526951, -1.53655, 1.90965, -0.0554864)
+use_collision = true
+size = Vector3(1, 1, 10.0904)
+
+[node name="Box_table" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.075292, 0, 0, 0, 2.97053, 0, 0, 0, 0.0526951, -1.22686, 1.90965, 0.261688)
+use_collision = true
+size = Vector3(1.85999, 1, 8.78524)
+
+[node name="Fro_table" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.075292, 0, 0, 0, 2.97053, 0, 0, 0, 0.0526951, -0.15506, 1.90965, 0.267421)
+use_collision = true
+size = Vector3(1.85999, 1, 8.56765)
+
+[node name="Dumposter" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.0645381, 0.000730458, -0.0330137, -0.0441344, 2.973, -0.00806081, 0.0282978, 0.000493047, 0.0436581, 2.10124, 4.19802, 0.306776)
+use_collision = true
+size = Vector3(2.77628, 2.52533, 5.318)
+
+[node name="w5" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.075292, 0, 0, 0, 2.97053, 0, 0, 0, 0.0526951, -0.658167, 1.90965, 0.267421)
+use_collision = true
+size = Vector3(1.85999, 1, 8.56765)
+
+[node name="sink" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.075292, 0, 0, 0, 2.97053, 0, 0, 0, 0.0526951, -0.613423, 1.90965, -0.376912)
+use_collision = true
+size = Vector3(1.85999, 1, 4.92884)
+
+[node name="Dish rack" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(-0.075292, 0, 6.04952e-09, 0, 2.97053, 0, -5.01244e-09, 0, -0.0526951, -0.130446, 6.34206, -0.357884)
+use_collision = true
+size = Vector3(0.902649, 3.98425, 5.0329)
+
+[node name="w4" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(-3.02476e-09, 0, 0.075292, 0, 2.97053, 0, -0.0526951, 0, -2.50622e-09, -0.478382, 1.90965, 0.43359)
+use_collision = true
+size = Vector3(1.85999, 1, 6.66947)
+
+[node name="hinge" type="CSGBox3D" parent="Envorement"]
+transform = Transform3D(0.075292, 0, 0, 0, 2.97053, 0, 0, 0, 0.0526951, -1.53593, 2.94511, -0.396093)
+use_collision = true
+size = Vector3(1, 0.321411, 2.96919)
+
+[node name="Protocontoller" parent="." instance=ExtResource("1_r150o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.83056, 0, 19.3043)
+
+[node name="ProtoController" parent="Protocontoller" index="0"]
+transform = Transform3D(0.115111, 0, -0.993353, 0, 1, 0, 0.993353, 0, 0.115111, -1.14871, 0, 1.59249)
+
+[node name="Camera3D" parent="Protocontoller/ProtoController/Head" index="0"]
+current = true
+
+[node name="Test wall" type="StaticBody3D" parent="."]
+transform = Transform3D(1.00255, 0, 0, 0, 1.00255, 0, 0, 0, 1.00255, 0, 0, 0)
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Test wall"]
+transform = Transform3D(12.2246, 0, 0, 0, 2.78052, 0, 0, 0, 1, 0, 1.24506, 18.7544)
+shape = SubResource("BoxShape3D_idj7w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Test wall/CollisionShape3D"]
+mesh = SubResource("BoxMesh_kln2b")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." groups=["pickable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4423, 0.953148, 21.2785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_r150o")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_kln2b")
+
+[editable path="Protocontoller"]
+[editable path="Protocontoller/ProtoController"]
