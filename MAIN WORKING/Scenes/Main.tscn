@@ -22,10 +22,10 @@ volumetric_fog_anisotropy = -0.44
 volumetric_fog_detail_spread = 2.7991
 volumetric_fog_sky_affect = 0.29
 
+[sub_resource type="BoxMesh" id="BoxMesh_kln2b"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_idj7w"]
 size = Vector3(1, 1.20068, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_kln2b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_r150o"]
 
@@ -204,12 +204,15 @@ current = true
 transform = Transform3D(1.00255, 0, 0, 0, 1.00255, 0, 0, 0, 1.00255, 0, 0, 0)
 collision_mask = 3
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Test wall"]
+transform = Transform3D(12.2246, 0, 0, 0, 2.78052, 0, 0, 0, 1, 0, 1.24506, 18.7544)
+layers = 3
+mesh = SubResource("BoxMesh_kln2b")
+skeleton = NodePath("../CollisionShape3D")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Test wall"]
 transform = Transform3D(12.2246, 0, 0, 0, 2.78052, 0, 0, 0, 1, 0, 1.24506, 18.7544)
 shape = SubResource("BoxShape3D_idj7w")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Test wall/CollisionShape3D"]
-mesh = SubResource("BoxMesh_kln2b")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." groups=["pickable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4423, 0.953148, 21.2785)
