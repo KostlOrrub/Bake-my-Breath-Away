@@ -1,15 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmlxrlu05d0lc"]
+[gd_scene load_steps=3 format=3 uid="uid://bmlxrlu05d0lc"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://assets/proto_controller/proto_controller.tscn" id="1_qn1kt"]
-[ext_resource type="Script" uid="uid://bv7853k3xrn0t" path="res://assets/proto_controller/proto_controller.gd" id="2_48686"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qn1kt"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="ProtoController" parent="." instance=ExtResource("1_qn1kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14871, 0, 1.59249)
-script = ExtResource("2_48686")
+transform = Transform3D(1, 0, 0, 0, 1.39915, 0, 0, 0, 1, -1.14871, 0, 1.59249)
 can_sprint = true
 input_left = "walk_Left"
 input_right = "walk_Right"
@@ -18,8 +16,11 @@ input_back = "walk_Back"
 input_jump = "Jump"
 input_sprint = "Sprint"
 
+[node name="Head" parent="ProtoController" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.15813, 0)
+
 [node name="Camera3D" parent="ProtoController/Head" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.127932, 0)
+transform = Transform3D(1, 0, 0, 0, 0.71472, 0, 0, 0, 1, 0, -0.127932, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="ProtoController/Head/Camera3D" index="0"]
 transform = Transform3D(-0.538389, 0.000175909, 0.000749539, 3.11696e-05, 1.03146, -0.00261058, 0.00306326, 0.0204349, 0.131763, -0.026107, -0.178798, -0.139488)

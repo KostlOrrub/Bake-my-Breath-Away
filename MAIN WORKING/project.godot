@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Test_1"
+config/name="Bake_My_Breath_Away"
 run/main_scene="uid://bi811gkv6mc2n"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
