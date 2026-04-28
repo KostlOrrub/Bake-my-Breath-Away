@@ -18,7 +18,6 @@ size = Vector3(1, 1.20068, 1)
 transform = Transform3D(14.4512, 0, 0, 0, 0.33664, 0, 0, 0, 18.9771, 21.1958, 0, 0)
 
 [node name="CSG_Floor" type="CSGBox3D" parent="Envorement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 use_collision = true
 collision_mask = 3
 size = Vector3(4.37384, 1, 1)

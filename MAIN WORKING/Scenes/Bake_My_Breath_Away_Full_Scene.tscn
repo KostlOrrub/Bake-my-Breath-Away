@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b8khbh6ivo3qv" path="res://Scenes/Texture_Files/Game_level_Full_Ckae_tex.png" id="2_lb8yb"]
 [ext_resource type="Texture2D" uid="uid://d2bcri5fwrt4r" path="res://Scenes/Texture_Files/Game_level_Full_Ckae_tex_van.png" id="3_7yxip"]
 [ext_resource type="Texture2D" uid="uid://cm147g24nuv21" path="res://Scenes/Texture_Files/Game_level_Full_marble_92_basecolor-1K.png" id="4_8e6ay"]
-[ext_resource type="Material" path="res://Materials/Grey_metal.tres" id="4_b7678"]
+[ext_resource type="Material" uid="uid://ckdb5uyy6yyoq" path="res://MaterialsTextures/Grey_metal.tres" id="4_b7678"]
 [ext_resource type="Texture2D" uid="uid://b6elf0rv3ouy5" path="res://Scenes/Texture_Files/Game_level_Full_marble_92_roughness-1K.png" id="5_isvbo"]
 [ext_resource type="Texture2D" uid="uid://b8u3swo07fw8w" path="res://Scenes/Texture_Files/Game_level_Full_marble_92_normal-1K.png" id="6_pxvb3"]
 [ext_resource type="Texture2D" uid="uid://cg2aohdq0wr2x" path="res://Scenes/Texture_Files/Game_level_Full_Decal_10_opacity-1K_sRGB Encoded Rec.709 (sRGB)_ACEScg.png" id="7_b7678"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://uljcstdm5gwd" path="res://Scenes/Texture_Files/Game_level_Full_Decal_10_normal-1K.png" id="9_0piqr"]
 [ext_resource type="Texture2D" uid="uid://g8hx6mw6rgbf" path="res://Scenes/Texture_Files/Game_level_Full_oak_veneer_01_diff_1k.png" id="10_faf5h"]
 [ext_resource type="Texture2D" uid="uid://3q66pumweay1" path="res://Scenes/Texture_Files/Game_level_Full_oak_veneer_01_arm_1k.png" id="11_eto5o"]
-[ext_resource type="Material" path="res://Materials/Black_PLastic.tres" id="11_nl06q"]
+[ext_resource type="Material" uid="uid://by8cibxmlywaq" path="res://MaterialsTextures/Black_PLastic.tres" id="11_nl06q"]
 [ext_resource type="Texture2D" uid="uid://sic0hkqtrmg" path="res://Scenes/Texture_Files/Game_level_Full_oak_veneer_01_nor_dx_1k.png" id="12_f5lvd"]
 [ext_resource type="Material" uid="uid://c14sl6ck88abm" path="res://MaterialsTextures/Paper_bag.tres" id="12_lb8yb"]
 [ext_resource type="Texture2D" uid="uid://cef6y1ewgrwgc" path="res://Scenes/Texture_Files/Game_level_Full_All_posters.png" id="13_h41ss"]
@@ -46,10 +46,11 @@
 [ext_resource type="PackedScene" uid="uid://bb2ljluitx34e" path="res://Scenes/Striped_thing.tscn" id="44_7yxip"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_isvbo"]
-sky_top_color = Color(0.1518, 0.184383, 0.23, 1)
-sky_horizon_color = Color(0.241539, 0.244783, 0.26501, 1)
-ground_bottom_color = Color(0.0588235, 0.0392157, 0.0745098, 1)
-ground_horizon_color = Color(0.241539, 0.244783, 0.26501, 1)
+sky_top_color = Color(0.0292127, 0.0419558, 0.150105, 1)
+sky_horizon_color = Color(0.133058, 0.0605587, 0.0692763, 1)
+sky_curve = 0.178381
+ground_bottom_color = Color(0.21192, 0.1776, 0.24, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
 energy_multiplier = 2.6
 
 [sub_resource type="Sky" id="Sky_pxvb3"]
@@ -8157,6 +8158,7 @@ skeleton = NodePath("")
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 18.7377, 0.917798, 0.292727)
 mesh = SubResource("ArrayMesh_khhpd")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("4_b7678")
 
 [node name="Menu_Wall1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 1.50054, 2.94692, -0.30468)

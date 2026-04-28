@@ -1,6 +1,6 @@
 extends MeshInstance3D
 
-var toggle = false
+var toggle = true
 var interactable = true
 @export var animation_player : AnimationPlayer
 
