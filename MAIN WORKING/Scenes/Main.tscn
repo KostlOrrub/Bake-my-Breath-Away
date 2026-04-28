@@ -1,26 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bi811gkv6mc2n"]
+[gd_scene load_steps=7 format=3 uid="uid://bi811gkv6mc2n"]
 
+[ext_resource type="PackedScene" uid="uid://c1vql7nryng3a" path="res://Scenes/Bake_My_Breath_Away_Full_Scene.tscn" id="1_idj7w"]
 [ext_resource type="PackedScene" uid="uid://bmlxrlu05d0lc" path="res://Scenes/Proto_Controller.tscn" id="1_r150o"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_idj7w"]
-sky_material = SubResource("ProceduralSkyMaterial_r150o")
-
-[sub_resource type="Environment" id="Environment_kln2b"]
-background_mode = 2
-background_energy_multiplier = 1.17
-sky = SubResource("Sky_idj7w")
-ambient_light_source = 3
-ambient_light_color = Color(0, 0.92549, 0.933333, 1)
-tonemap_mode = 2
-glow_enabled = true
-fog_sun_scatter = 0.17
-volumetric_fog_anisotropy = -0.44
-volumetric_fog_detail_spread = 2.7991
-volumetric_fog_sky_affect = 0.29
 
 [sub_resource type="BoxMesh" id="BoxMesh_kln2b"]
 
@@ -32,14 +13,6 @@ size = Vector3(1, 1.20068, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
 
 [node name="Node3D" type="Node3D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_kln2b")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.817196, -0.243077, 0.522594, 0.28669, 0.615153, 0.734435, -0.5, 0.75, -0.433013, 25.3094, 18.0248, 0)
-light_color = Color(1, 1, 0.894118, 1)
-shadow_enabled = true
 
 [node name="Envorement" type="Node3D" parent="."]
 transform = Transform3D(14.4512, 0, 0, 0, 0.33664, 0, 0, 0, 18.9771, 21.1958, 0, 0)
@@ -73,7 +46,7 @@ operation = 2
 size = Vector3(0.935852, 4.90137, 0.115612)
 
 [node name="window3" type="CSGBox3D" parent="Envorement/CSG_Front_wall"]
-transform = Transform3D(1.00018, -3.09519e-05, 0.0708112, 0.00543841, 1.08804, -0.152181, -0.0029395, 3.9282e-05, 0.999908, -0.104952, 0.441921, -0.0087173)
+transform = Transform3D(1.00018, -3.09519e-05, 0.0708112, 0.00543841, 1.08804, -0.152181, -0.0029395, 3.9282e-05, 0.999908, -0.0890718, 0.505245, -0.0161267)
 operation = 2
 size = Vector3(0.935852, 4.90137, 0.115612)
 
@@ -83,7 +56,7 @@ operation = 2
 size = Vector3(0.935852, 4.90137, 0.115612)
 
 [node name="CSG_Back_Wall" type="CSGBox3D" parent="Envorement"]
-transform = Transform3D(0.000845162, 0.022297, 0.00305952, -11.6512, 0.0029482, 0.825457, 0.00298186, -3.97503e-05, 1.01446, -0.0852387, 8.61398, -0.00155688)
+transform = Transform3D(0.000845162, 0.022297, 0.00305952, -11.6512, 0.0029482, 0.825457, 0.00298186, -3.97503e-05, 1.01446, -0.0852389, 8.61398, -0.00155688)
 use_collision = true
 size = Vector3(1.47314, 1, 0.978516)
 
@@ -191,14 +164,8 @@ transform = Transform3D(0.075292, 0, 0, 0, 2.97053, 0, 0, 0, 0.0526951, -1.53593
 use_collision = true
 size = Vector3(1, 0.321411, 2.96919)
 
-[node name="Protocontoller" parent="." instance=ExtResource("1_r150o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.83056, 0, 19.3043)
-
-[node name="ProtoController" parent="Protocontoller" index="0"]
-transform = Transform3D(0.115111, 0, -0.993353, 0, 1, 0, 0.993353, 0, 0.115111, -1.14871, 0, 1.59249)
-
-[node name="Camera3D" parent="Protocontoller/ProtoController/Head" index="0"]
-current = true
+[node name="Game_level_Full" parent="Envorement" instance=ExtResource("1_idj7w")]
+transform = Transform3D(0.0691984, 0, 0, 0, 2.97053, 0, 0, 0, 0.0526951, -1.35488, 0.670975, 2.94171)
 
 [node name="Test wall" type="StaticBody3D" parent="."]
 transform = Transform3D(1.00255, 0, 0, 0, 1.00255, 0, 0, 0, 1.00255, 0, 0, 0)
@@ -214,6 +181,9 @@ skeleton = NodePath("../CollisionShape3D")
 transform = Transform3D(12.2246, 0, 0, 0, 2.78052, 0, 0, 0, 1, 0, 1.24506, 18.7544)
 shape = SubResource("BoxShape3D_idj7w")
 
+[node name="Node3D" parent="Test wall" instance=ExtResource("1_r150o")]
+transform = Transform3D(0.997456, 0, 0, 0, 0.997456, 0, 0, 0, 0.997456, -6.79205, 0.0992095, 51.4521)
+
 [node name="RigidBody3D" type="RigidBody3D" parent="." groups=["pickable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4423, 0.953148, 21.2785)
 
@@ -223,6 +193,3 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("BoxShape3D_kln2b")
-
-[editable path="Protocontoller"]
-[editable path="Protocontoller/ProtoController"]

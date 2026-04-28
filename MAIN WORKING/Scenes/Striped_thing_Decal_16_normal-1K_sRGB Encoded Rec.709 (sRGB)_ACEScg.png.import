@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cl3u46w4rgvna"
+path.s3tc="res://.godot/imported/Striped_thing_Decal_16_normal-1K_sRGB Encoded Rec.709 (sRGB)_ACEScg.png-93eac1ed24977f72b4533c3796e527da.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "21c88f5ae0c360f692b180f4354f1d3c"
+}
+
+[deps]
+
+source_file="res://Scenes/Striped_thing_Decal_16_normal-1K_sRGB Encoded Rec.709 (sRGB)_ACEScg.png"
+dest_files=["res://.godot/imported/Striped_thing_Decal_16_normal-1K_sRGB Encoded Rec.709 (sRGB)_ACEScg.png-93eac1ed24977f72b4533c3796e527da.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://Scenes/Striped_thing_Decal_16_normal-1K_sRGB Encoded Rec.709 (sRGB)_ACEScg.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://be4mvdf8x6wci"
+path="res://.godot/imported/Game_level_Full_Decal_10_opacity-1K.png-fc6371ccc5d54ddd39cac5a2371f8564.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={
+"md5": "14e7bb3c8d1e5fc4e75c29df58b25bfa"
+}
+
+[deps]
+
+source_file="res://Scenes/Texture_Files/Game_level_Full_Decal_10_opacity-1K.png"
+dest_files=["res://.godot/imported/Game_level_Full_Decal_10_opacity-1K.png-fc6371ccc5d54ddd39cac5a2371f8564.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

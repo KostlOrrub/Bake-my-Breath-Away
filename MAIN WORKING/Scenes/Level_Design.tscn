@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://x0wicplhigx8"]
+
+[ext_resource type="PackedScene" uid="uid://btch34iuvjbi2" path="res://Scenes/Game_level_Full.glb" id="1_1eg4g"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Game_level_Full" parent="Node3D" instance=ExtResource("1_1eg4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398062, 0, 1.61554)
+
+[node name="window_cill10" parent="Node3D/Game_level_Full/Cills" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.03051, -589.778, -298.349, -316.831)
+
+[node name="window_cill3" parent="Node3D/Game_level_Full/Cills" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.01712, -589.73, -776.009, -307.437)
+
+[node name="window_cill8" parent="Node3D/Game_level_Full/Cills" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.06405, -258.596, 324.116, -339.913)
+
+[node name="window_cill9" parent="Node3D/Game_level_Full/Cills" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -589.778, -535.003, -309.285)
+
+[editable path="Node3D/Game_level_Full"]

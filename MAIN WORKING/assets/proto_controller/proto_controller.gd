@@ -137,6 +137,10 @@ func _physics_process(delta: float) -> void:
 			if not pickedObject:
 				pick_up_object(object)
 				
+
+			
+			
+		 
 # hardcoded offset in front of camera for testing
 	if pickedObject:
 		var cam = $Head/Camera3D
