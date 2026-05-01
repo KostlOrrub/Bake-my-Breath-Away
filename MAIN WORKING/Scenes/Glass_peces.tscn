@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://j8o7uf5sak53"]
+[gd_scene load_steps=25 format=4 uid="uid://j8o7uf5sak53"]
 
 [ext_resource type="Texture2D" uid="uid://5wju1m4do141" path="res://Scenes/Glass_peces_exterior_wall_cladding_diff_1k.png" id="1_adt4e"]
 [ext_resource type="Texture2D" uid="uid://bp0gcd674rscd" path="res://Scenes/Glass_peces_exterior_wall_cladding_nor_dx_1k.png" id="2_rg2f0"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bwx1bhedl5cym" path="res://Scenes/Glass_peces_1K-metal_6-normal.jpg" id="8_cgjtn"]
 [ext_resource type="Material" uid="uid://ckdb5uyy6yyoq" path="res://MaterialsTextures/Grey_metal.tres" id="9_rg2f0"]
 [ext_resource type="Material" uid="uid://cddjxfkr4u4tc" path="res://MaterialsTextures/Glass.tres" id="10_7llcw"]
-[ext_resource type="Script" uid="uid://drtlse20a26xd" path="res://Scripts/door_interactable.gd" id="10_rfp43"]
+[ext_resource type="PackedScene" uid="uid://dd65aq15w0ct" path="res://Scenes/Front_Door.tscn" id="11_rfp43"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ueqq"]
 resource_name = "Insine_walls"
@@ -236,61 +236,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_604pp")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_s05nf"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_rg2f0"]
-
-[sub_resource type="Animation" id="Animation_2gf4k"]
-resource_name = "Close"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("hinge:rotation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 1.5708), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_7llcw"]
-resource_name = "Open"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("hinge:rotation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 1.5708)]
-}
-
-[sub_resource type="Animation" id="Animation_rfp43"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("hinge:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_s05nf"]
-_data = {
-&"Close": SubResource("Animation_2gf4k"),
-&"Open": SubResource("Animation_7llcw"),
-&"RESET": SubResource("Animation_rfp43")
-}
 
 [node name="Glass_peces" type="Node3D"]
 
@@ -361,38 +307,6 @@ transform = Transform3D(0.00316389, 0, 0, 0, 0, -0.00316389, 0, 0.00316389, 0, 1
 
 [node name="Srand_mixer_bowl" type="Node3D" parent="."]
 transform = Transform3D(0.00285344, -0.000874108, -9.58137e-12, 4.44698e-11, 1.77879e-10, -0.00298432, 0.000874108, 0.00285343, 1.83103e-10, 18.7298, 2.11565, 6.81776)
-
-[node name="Door_001" type="Node3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, -6.32897, 1.38443, 1.18594)
-
-[node name="hinge" type="Node3D" parent="Door_001"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 42.9393, 0)
-
-[node name="Door" type="MeshInstance3D" parent="Door_001/hinge" node_paths=PackedStringArray("animation_player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.83539, 99.2227, 0)
-script = ExtResource("10_rfp43")
-animation_player = NodePath("../../AnimationPlayer")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_001/hinge/Door"]
-transform = Transform3D(27.7685, 0, 0, 0, 211.854, 0, 0, 0, 248.94, 0, 0, 0)
-shape = SubResource("BoxShape3D_s05nf")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Door_001/hinge"]
-transform = Transform3D(4.92166, -1.35437, -1.30154, 0.0392766, 168.643, -0.321895, 0.0716814, 0.58658, 89.5401, 6.229, 101.473, -68.062)
-mesh = SubResource("BoxMesh_rg2f0")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("10_7llcw")
-
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Door_001/hinge"]
-transform = Transform3D(4.90333, -1.11801, 0.824935, 0.039127, 140.537, -0.441051, -0.0328266, 0.512702, 122.695, 6.229, 101.473, 48.2287)
-mesh = SubResource("BoxMesh_rg2f0")
-skeleton = NodePath("../../..")
-surface_material_override/0 = ExtResource("10_7llcw")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Door_001"]
-libraries = {
-&"": SubResource("AnimationLibrary_s05nf")
-}
 
 [node name="Lights" type="Node3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
@@ -477,6 +391,16 @@ transform = Transform3D(0.132203, 0, 0, 0, 4.17834, 0, 0, 0, 1.75133, -6.13435, 
 mesh = SubResource("BoxMesh_rg2f0")
 surface_material_override/0 = ExtResource("10_7llcw")
 
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0570083, 0, 0, 0, -0.0104182, -0.873339, 0, 1.80337, -0.00504533, -6.31642, 1.99255, 2.58348)
+mesh = SubResource("BoxMesh_rg2f0")
+surface_material_override/0 = ExtResource("10_7llcw")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0570083, 0, 0, 0, -0.00834163, -1.24071, 0, 1.44392, -0.00716765, -6.31642, 0.900558, 2.62402)
+mesh = SubResource("BoxMesh_rg2f0")
+surface_material_override/0 = ExtResource("10_7llcw")
+
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.6439e-05, 4.32636, -0.0288229, 0.00221621, -0.0320918, -3.88567, -0.129827, 0, -0.0663338, -2.44578, 3.2026, 4.92472)
 mesh = SubResource("BoxMesh_rg2f0")
@@ -491,3 +415,6 @@ surface_material_override/0 = ExtResource("10_7llcw")
 transform = Transform3D(0.132203, 0, 0, 0, 4.17834, 0, 0, 0, 1.75133, -6.13435, 3.28513, -6.36657)
 mesh = SubResource("BoxMesh_rg2f0")
 surface_material_override/0 = ExtResource("10_7llcw")
+
+[node name="Glass_peces" parent="." instance=ExtResource("11_rfp43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0394077, 0, 2.03827)

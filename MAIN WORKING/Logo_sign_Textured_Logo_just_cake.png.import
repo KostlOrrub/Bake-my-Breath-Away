@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bgdh4a3n223lg"
+path.s3tc="res://.godot/imported/Logo_sign_Textured_Logo_just_cake.png-7be8e878d4c493ee1b5b8ce13cf30350.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "3f3b0c67d46d23f939102a867678597a"
+}
+
+[deps]
+
+source_file="res://Logo_sign_Textured_Logo_just_cake.png"
+dest_files=["res://.godot/imported/Logo_sign_Textured_Logo_just_cake.png-7be8e878d4c493ee1b5b8ce13cf30350.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

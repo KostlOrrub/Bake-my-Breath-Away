@@ -1,4 +1,4 @@
-[gd_scene load_steps=474 format=4 uid="uid://c1vql7nryng3a"]
+[gd_scene load_steps=475 format=4 uid="uid://c1vql7nryng3a"]
 
 [ext_resource type="Texture2D" uid="uid://ch8bm28l0rccy" path="res://Scenes/Texture_Files/Game_level_Full_Cake color.png" id="1_u36r2"]
 [ext_resource type="Texture2D" uid="uid://b8khbh6ivo3qv" path="res://Scenes/Texture_Files/Game_level_Full_Ckae_tex.png" id="2_lb8yb"]
@@ -44,10 +44,11 @@
 [ext_resource type="Texture2D" uid="uid://dfugm4gwu1jvs" path="res://Scenes/Texture_Files/Game_level_Full_1K_tiling_17_roughness.png" id="41_22wmy"]
 [ext_resource type="Texture2D" uid="uid://b24e2t5r8aoga" path="res://Scenes/Texture_Files/Game_level_Full_1K_tiling_17_normal.png" id="42_owsco"]
 [ext_resource type="PackedScene" uid="uid://bb2ljluitx34e" path="res://Scenes/Striped_thing.tscn" id="44_7yxip"]
+[ext_resource type="PackedScene" uid="uid://b45c3uuolgy4l" path="res://Scenes/Logo_sign_Textured.tscn" id="45_8e6ay"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_isvbo"]
 sky_top_color = Color(0.0292127, 0.0419558, 0.150105, 1)
-sky_horizon_color = Color(0.133058, 0.0605587, 0.0692763, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
 sky_curve = 0.178381
 ground_bottom_color = Color(0.21192, 0.1776, 0.24, 1)
 ground_horizon_color = Color(0, 0, 0, 1)
@@ -9261,3 +9262,6 @@ skeleton = NodePath("")
 
 [node name="Striped_thing" parent="." instance=ExtResource("44_7yxip")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46583, 5.44704, -2.74957)
+
+[node name="Logo_sign_Textured2" parent="." instance=ExtResource("45_8e6ay")]
+transform = Transform3D(-8.0429e-09, 0, -0.184, 0, 0.184, 0, 0.184, 0, -8.0429e-09, -6.6, 4.2, 0.7)
