@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://cpivvg1hf7a2s"]
+[gd_scene load_steps=7 format=4 uid="uid://cpivvg1hf7a2s"]
+
+[ext_resource type="PackedScene" uid="uid://co5fhqrpcusik" path="res://Scenes/sone_light.tscn" id="1_c3omv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6vtb"]
 resource_name = "Green_Metal"
@@ -91,8 +93,11 @@ skeleton = NodePath("")
 [node name="SpotLight3D" type="SpotLight3D" parent="street_light"]
 transform = Transform3D(-1.38408, 0, -0.0338987, 0, 1.3845, 0, 0.0338987, 0, -1.38408, 0, -1.71787, 0)
 light_color = Color(1, 0.929412, 0.72549, 1)
-light_energy = 2.0
+light_energy = 5.0
 light_indirect_energy = 3.747
 shadow_enabled = true
 spot_range = 813.128
 spot_angle = 23.3415
+
+[node name="Cone_light" parent="." instance=ExtResource("1_c3omv")]
+transform = Transform3D(0, -1.8338, -95.2918, 96.0504, 0, 0, 0, -162.891, 1.07278, 626.334, 135.25, 716.465)
