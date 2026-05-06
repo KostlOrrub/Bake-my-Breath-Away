@@ -8007,6 +8007,7 @@ shadow_mesh = SubResource("ArrayMesh_bq7ja")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8817, -0.470934, 0.0287539, 0.0220963, 0.019661, 0.999563, -0.471293, 0.88195, -0.0069292, 13.3517, 6.42601, -1.60575)
+visible = false
 light_color = Color(0.247059, 0.247059, 0.290196, 1)
 light_energy = 4.0
 shadow_enabled = true

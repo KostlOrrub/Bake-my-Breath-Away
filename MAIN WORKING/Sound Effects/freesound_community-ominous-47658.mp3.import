@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4dytij64kf2c"
+path="res://.godot/imported/freesound_community-ominous-47658.mp3-68a619ff39e716f8550cc9c3182acb32.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/freesound_community-ominous-47658.mp3"
+dest_files=["res://.godot/imported/freesound_community-ominous-47658.mp3-68a619ff39e716f8550cc9c3182acb32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

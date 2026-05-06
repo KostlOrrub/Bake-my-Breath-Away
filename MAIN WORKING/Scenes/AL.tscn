@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bmdr0sq3bq6qm" path="res://MaterialsTextures/AL_PNG.png" id="1_4frt5"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Al_Node" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(10.1846, 0, 0, 0, 10.1846, 0, 0, 0, 10.1846, 0, 100.696, 0)

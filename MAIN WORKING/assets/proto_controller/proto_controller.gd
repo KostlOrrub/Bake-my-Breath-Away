@@ -5,6 +5,8 @@
 
 extends CharacterBody3D
 var pickedObject
+@onready var sfx_walk: AudioStreamPlayer3D = $sfx_walk
+
 ## Can we move around?
 @export var can_move : bool = true
 ## Are we affected by gravity?
@@ -127,6 +129,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.z = move_toward(velocity.z, 0, move_speed)
+			sfx_walk.play()
 	else:
 		velocity.x = 0
 		velocity.y = 0

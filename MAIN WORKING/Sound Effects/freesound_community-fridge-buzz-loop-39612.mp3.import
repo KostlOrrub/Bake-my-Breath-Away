@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://25p0hgj283t2"
+path="res://.godot/imported/freesound_community-fridge-buzz-loop-39612.mp3-725211ba7bfc703ea07958a5efede773.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/freesound_community-fridge-buzz-loop-39612.mp3"
+dest_files=["res://.godot/imported/freesound_community-fridge-buzz-loop-39612.mp3-725211ba7bfc703ea07958a5efede773.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
