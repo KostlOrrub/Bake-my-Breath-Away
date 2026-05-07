@@ -1,0 +1,332 @@
+[gd_scene load_steps=61 format=3 uid="uid://1tlri10fvwvk"]
+
+[ext_resource type="FontFile" uid="uid://cc38one4d4x1q" path="res://Fonts/SuperChiby-BL62V.ttf" id="1_7lgnh"]
+[ext_resource type="Script" uid="uid://biwyfpjkyiw4a" path="res://Scenes/main_manu.gd" id="1_p184u"]
+[ext_resource type="StyleBox" uid="uid://dyftpsqx8iyvv" path="res://MaterialsTextures/button_Styles.tres" id="2_p184u"]
+[ext_resource type="Texture2D" uid="uid://c7wj775k2cryk" path="res://MaterialsTextures/Logo.png" id="3_tye35"]
+[ext_resource type="AudioStream" uid="uid://bun7fwyfm28o3" path="res://Sound Effects/paulyudin-happy-happy-music-513014.mp3" id="5_tye35"]
+[ext_resource type="Texture2D" uid="uid://c1jlhkr8eji81" path="res://MaterialsTextures/Frosting drip/frosting_drip34.png" id="6_6bo5u"]
+[ext_resource type="Texture2D" uid="uid://dwhcfdor1gapv" path="res://MaterialsTextures/Frosting drip/frosting_drip35.png" id="7_vwn37"]
+[ext_resource type="Texture2D" uid="uid://b0gqyxv0day1u" path="res://MaterialsTextures/Frosting drip/frosting_drip36.png" id="8_bjk6f"]
+[ext_resource type="Texture2D" uid="uid://ch7vwbqrfb1bm" path="res://MaterialsTextures/Frosting drip/frosting_drip37.png" id="9_6thqo"]
+[ext_resource type="Texture2D" uid="uid://b2bkdlsyku6yr" path="res://MaterialsTextures/Frosting drip/frosting_drip38.png" id="10_u1ook"]
+[ext_resource type="Texture2D" uid="uid://ddu6srbwvh7pn" path="res://MaterialsTextures/Frosting drip/frosting_drip39.png" id="11_iuqkc"]
+[ext_resource type="Texture2D" uid="uid://cowiiibdlxx8g" path="res://MaterialsTextures/Frosting drip/frosting_drip40.png" id="12_y5a61"]
+[ext_resource type="Texture2D" uid="uid://dcwvbfweyv1ws" path="res://MaterialsTextures/Frosting drip/frosting_drip41.png" id="13_u1sfw"]
+[ext_resource type="Texture2D" uid="uid://2gctgeiaeps5" path="res://MaterialsTextures/Frosting drip/frosting_drip42.png" id="14_subt7"]
+[ext_resource type="Texture2D" uid="uid://csq1p8rrcqer8" path="res://MaterialsTextures/Frosting drip/frosting_drip43.png" id="15_2cth7"]
+[ext_resource type="Texture2D" uid="uid://b1qoi6oee1yio" path="res://MaterialsTextures/Frosting drip/frosting_drip44.png" id="16_r44e5"]
+[ext_resource type="Texture2D" uid="uid://bacn67hq4kfg2" path="res://MaterialsTextures/Frosting drip/frosting_drip45.png" id="17_jkpor"]
+[ext_resource type="Texture2D" uid="uid://s8x4livl260t" path="res://MaterialsTextures/Frosting drip/frosting_drip46.png" id="18_6eo3w"]
+[ext_resource type="Texture2D" uid="uid://biwgce451p6kr" path="res://MaterialsTextures/Frosting drip/frosting_drip47.png" id="19_en4qt"]
+[ext_resource type="Texture2D" uid="uid://3l6lpdcb8xhj" path="res://MaterialsTextures/Frosting drip/frosting_drip48.png" id="20_lqtc0"]
+[ext_resource type="Texture2D" uid="uid://b8qp2rhbsydau" path="res://MaterialsTextures/Frosting drip/frosting_drip49.png" id="21_ttc3q"]
+[ext_resource type="Texture2D" uid="uid://bcf6se5egsexq" path="res://MaterialsTextures/Frosting drip/frosting_drip50.png" id="22_sg4y7"]
+[ext_resource type="Texture2D" uid="uid://jqe2h2wwn1tg" path="res://MaterialsTextures/Frosting drip/frosting_drip51.png" id="23_tjmj5"]
+[ext_resource type="Texture2D" uid="uid://ckk0eqqn3x685" path="res://MaterialsTextures/Frosting drip/frosting_drip52.png" id="24_8ofy8"]
+[ext_resource type="Texture2D" uid="uid://bvxk4c51yacot" path="res://MaterialsTextures/Frosting drip/frosting_drip53.png" id="25_btk16"]
+[ext_resource type="Texture2D" uid="uid://csfwn51qrqird" path="res://MaterialsTextures/Frosting drip/frosting_drip54.png" id="26_5m2n8"]
+[ext_resource type="Texture2D" uid="uid://c2jh2inht0a3c" path="res://MaterialsTextures/Frosting drip/frosting_drip55.png" id="27_bmroq"]
+[ext_resource type="Texture2D" uid="uid://d1sifhig01dgu" path="res://MaterialsTextures/Frosting drip/frosting_drip56.png" id="28_i16ny"]
+[ext_resource type="Texture2D" uid="uid://ledewxeade51" path="res://MaterialsTextures/Frosting drip/frosting_drip57.png" id="29_3ovit"]
+[ext_resource type="Texture2D" uid="uid://d4awgjwyi2v7g" path="res://MaterialsTextures/Frosting drip/frosting_drip58.png" id="30_xpdav"]
+[ext_resource type="Texture2D" uid="uid://c6e7sbuj0ehcf" path="res://MaterialsTextures/Frosting drip/frosting_drip59.png" id="31_e811k"]
+[ext_resource type="Texture2D" uid="uid://d2rqseaudnsjx" path="res://MaterialsTextures/Frosting drip/frosting_drip60.png" id="32_bro4s"]
+[ext_resource type="Texture2D" uid="uid://biiuu5goaevin" path="res://MaterialsTextures/Frosting drip/frosting_drip61.png" id="33_gnqu2"]
+[ext_resource type="Texture2D" uid="uid://dv7ulexnvu5fx" path="res://MaterialsTextures/Frosting drip/frosting_drip62.png" id="34_vpucg"]
+[ext_resource type="Texture2D" uid="uid://b5mv7ml8bpqr" path="res://MaterialsTextures/Frosting drip/frosting_drip63.png" id="35_u8emi"]
+[ext_resource type="Texture2D" uid="uid://5dx2ffyi74v2" path="res://MaterialsTextures/Frosting drip/frosting_drip64.png" id="36_fl1v5"]
+[ext_resource type="Texture2D" uid="uid://dvb0isxn0xly1" path="res://MaterialsTextures/Frosting drip/frosting_drip65.png" id="37_0rcw4"]
+[ext_resource type="Texture2D" uid="uid://bbw110lt8ogpn" path="res://MaterialsTextures/Frosting drip/frosting_drip66.png" id="38_cl2v5"]
+[ext_resource type="Texture2D" uid="uid://cf2qeorhjjpji" path="res://MaterialsTextures/Frosting drip/frosting_drip67.png" id="39_duqof"]
+[ext_resource type="Texture2D" uid="uid://62eakptl3tt" path="res://MaterialsTextures/Frosting drip/frosting_drip68.png" id="40_d4pm0"]
+[ext_resource type="Texture2D" uid="uid://ddyc5u2gmaq13" path="res://MaterialsTextures/Frosting drip/frosting_drip69.png" id="41_0w2lp"]
+[ext_resource type="Texture2D" uid="uid://b83kair3kukxb" path="res://MaterialsTextures/Frosting drip/frosting_drip70.png" id="42_nx87f"]
+[ext_resource type="Texture2D" uid="uid://cj5ximrk1sfbe" path="res://MaterialsTextures/Frosting drip/frosting_drip71.png" id="43_yh3f7"]
+[ext_resource type="Texture2D" uid="uid://ca6lckxw2c4s0" path="res://MaterialsTextures/Frosting drip/frosting_drip72.png" id="44_gcym3"]
+[ext_resource type="Texture2D" uid="uid://cpjjcditjm55e" path="res://MaterialsTextures/Frosting drip/frosting_drip73.png" id="45_ebsk6"]
+[ext_resource type="Texture2D" uid="uid://cyg6yva6h20s1" path="res://MaterialsTextures/Frosting drip/frosting_drip74.png" id="46_se0lb"]
+[ext_resource type="Texture2D" uid="uid://c7w5wva3q12o" path="res://MaterialsTextures/Frosting drip/frosting_drip75.png" id="47_20ugj"]
+[ext_resource type="Texture2D" uid="uid://kllvyppabo57" path="res://MaterialsTextures/Frosting drip/frosting_drip76.png" id="48_1in25"]
+[ext_resource type="Texture2D" uid="uid://dygo2aty3kkvc" path="res://MaterialsTextures/Frosting drip/frosting_drip77.png" id="49_p7ypq"]
+[ext_resource type="Texture2D" uid="uid://dwg41kh1l5lkq" path="res://MaterialsTextures/Frosting drip/frosting_drip78.png" id="50_c1njq"]
+[ext_resource type="Texture2D" uid="uid://bdldeqhpkdlpo" path="res://MaterialsTextures/Frosting drip/frosting_drip79.png" id="51_nwie8"]
+[ext_resource type="Texture2D" uid="uid://oneau540xtrv" path="res://MaterialsTextures/Frosting drip/frosting_drip80.png" id="52_qo8nb"]
+[ext_resource type="Texture2D" uid="uid://dh0jena8jb4k6" path="res://MaterialsTextures/Frosting drip/frosting_drip81.png" id="53_mt12d"]
+[ext_resource type="Texture2D" uid="uid://b8jcj8hb77lyy" path="res://MaterialsTextures/Frosting drip/frosting_drip82.png" id="54_vod05"]
+[ext_resource type="Texture2D" uid="uid://d4c6m5lp6wvev" path="res://MaterialsTextures/Frosting drip/frosting_drip83.png" id="55_c53d0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p184u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lgnh"]
+bg_color = Color(0.898039, 0.619608, 0.776471, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.52549, 0.223529, 0.478431, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p184u"]
+bg_color = Color(0.48, 0.2064, 0.43896, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.52549, 0.223529, 0.478431, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tye35"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s02yw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6bo5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vwn37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bjk6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6thqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_u1ook")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_iuqkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_y5a61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u1sfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_subt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2cth7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_r44e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jkpor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6eo3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_en4qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_lqtc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ttc3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sg4y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tjmj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_8ofy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_btk16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5m2n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bmroq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_i16ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3ovit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_xpdav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_e811k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_bro4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_gnqu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_vpucg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_u8emi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_fl1v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_0rcw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_cl2v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_duqof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_d4pm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_0w2lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_nx87f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_yh3f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_gcym3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ebsk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_se0lb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_20ugj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_1in25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_p7ypq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_c1njq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_nwie8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_qo8nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_mt12d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_vod05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_c53d0")
+}],
+"loop": true,
+"name": &"Drips",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p184u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.992157, 0.917647, 0.772549, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -433.5
+offset_top = -691.0
+offset_right = 433.5
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_tye35")
+expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_tye35")
+volume_db = -7.0
+autoplay = true
+parameters/looping = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = 80.0
+offset_right = 320.0
+offset_bottom = 274.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.65098, 0.843137, 0.929412, 1)
+theme_override_colors/font_color = Color(0.815686, 0.509804, 0.72549, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.921569, 0.486275, 1)
+theme_override_fonts/font = ExtResource("1_7lgnh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p184u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7lgnh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p184u")
+theme_override_styles/normal = ExtResource("2_p184u")
+text = "Bake away!"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.65098, 0.843137, 0.929412, 1)
+theme_override_colors/font_color = Color(0.815686, 0.509804, 0.72549, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.921569, 0.486275, 1)
+theme_override_fonts/font = ExtResource("1_7lgnh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tye35")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7lgnh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p184u")
+theme_override_styles/normal = ExtResource("2_p184u")
+text = "Exit"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 541)
+sprite_frames = SubResource("SpriteFrames_s02yw")
+animation = &"Drips"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_quit_pressed"]

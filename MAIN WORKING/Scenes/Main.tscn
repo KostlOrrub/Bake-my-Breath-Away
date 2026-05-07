@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://c1vql7nryng3a" path="res://Scenes/Bake_My_Breath_Away_Full_Scene.tscn" id="1_idj7w"]
 [ext_resource type="Script" uid="uid://bld46vccd0og2" path="res://Scenes/main.gd" id="1_pbw6q"]
-[ext_resource type="PackedScene" uid="uid://bmlxrlu05d0lc" path="res://Scenes/Proto_Controller.tscn" id="1_r150o"]
 [ext_resource type="PackedScene" uid="uid://0pcnco44u1xr" path="res://Scenes/AL.tscn" id="3_kln2b"]
 [ext_resource type="AudioStream" uid="uid://c5yo3ch6cjhhu" path="res://Sound Effects/dragon-studio-creepy-industrial-sounds-ambience-482892.mp3" id="5_v1gob"]
 [ext_resource type="AudioStream" uid="uid://b4dytij64kf2c" path="res://Sound Effects/freesound_community-ominous-47658.mp3" id="6_v1gob"]
+[ext_resource type="PackedScene" path="res://assets/proto_controller/Proto_new.tscn" id="7_50glp"]
 [ext_resource type="AudioStream" uid="uid://25p0hgj283t2" path="res://Sound Effects/freesound_community-fridge-buzz-loop-39612.mp3" id="7_jw32o"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_r150o"]
@@ -23,7 +23,6 @@ script = ExtResource("1_pbw6q")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_v1gob")
-volume_db = -15.0
 autoplay = true
 parameters/looping = true
 
@@ -31,20 +30,13 @@ parameters/looping = true
 transform = Transform3D(14.4512, 0, 0, 0, 0.33664, 0, 0, 0, 18.9771, 21.1958, 0, -50.0228)
 
 [node name="CSG_Floor2" type="CSGBox3D" parent="Envorement"]
-transform = Transform3D(0.999995, 0, 0, 0, 0.999993, 0, 0, 0, 0.999996, 0, 0, 3.19921)
+transform = Transform3D(0.999995, 0, 0, 0, 0.999993, 0, 0, 0, 0.999996, -1.24418, 0, 3.05556)
 use_collision = true
 collision_mask = 3
-size = Vector3(4.37384, 1, 2.0293)
+size = Vector3(6.86221, 1, 1.25971)
 
 [node name="Game_level_Full" parent="Envorement" instance=ExtResource("1_idj7w")]
 transform = Transform3D(0.0691984, 0, 0, 0, 2.97053, 0, 0, 0, 0.0526951, -1.35488, 0.670975, 2.94171)
-
-[node name="Test wall" type="StaticBody3D" parent="."]
-transform = Transform3D(1.00255, 0, 0, 0, 1.00255, 0, 0, 0, 1.00255, 0, 0, -50.0228)
-collision_mask = 3
-
-[node name="Node3D" parent="Test wall" instance=ExtResource("1_r150o")]
-transform = Transform3D(0.997456, 0, 0, 0, 0.997456, 0, 0, 0, 0.997456, -6.79205, 0.0992095, 51.4521)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." groups=["pickable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5685, 0.953148, 12.4608)
@@ -80,6 +72,9 @@ shape = SubResource("BoxShape3D_v1gob")
 [node name="Fridge_sfx" type="AudioStreamPlayer3D" parent="Freezer_audio"]
 stream = ExtResource("7_jw32o")
 volume_db = -25.0
+
+[node name="Node3D" parent="." instance=ExtResource("7_50glp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.7746, 0.168319, 1.87142)
 
 [connection signal="body_entered" from="Al_Collision" to="." method="_on_al_collision_body_entered"]
 [connection signal="body_exited" from="Al_Collision" to="." method="_on_al_collision_body_exited"]

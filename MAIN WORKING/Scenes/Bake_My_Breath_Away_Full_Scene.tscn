@@ -8129,7 +8129,7 @@ mesh = SubResource("ArrayMesh_uv7ru")
 skeleton = NodePath("")
 
 [node name="car" type="Node3D" parent="."]
-transform = Transform3D(0.00384413, 0, 0, 0, 0, -0.00384413, 0, 0.00384413, 0, 50.4112, 1.29751, -7.96851)
+transform = Transform3D(0.00384413, 0, 0, 0, 0, -0.00384413, 0, 0.00384413, 0, -35.5888, 1.29751, -7.96851)
 
 [node name="polySurface3" type="MeshInstance3D" parent="car"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -156.654, 1.73014, -235.135)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bun7fwyfm28o3"
+path="res://.godot/imported/paulyudin-happy-happy-music-513014.mp3-104d7e6a16fb0d35501a3014e09f9b4b.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/paulyudin-happy-happy-music-513014.mp3"
+dest_files=["res://.godot/imported/paulyudin-happy-happy-music-513014.mp3-104d7e6a16fb0d35501a3014e09f9b4b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
