@@ -237,9 +237,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("55_c53d0")
 }],
-"loop": true,
+"loop": false,
 "name": &"Drips",
-"speed": 5.0
+"speed": 24.0
 }]
 
 [node name="Control" type="Control"]
@@ -323,8 +323,8 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_p184u")
 theme_override_styles/normal = ExtResource("2_p184u")
 text = "Exit"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(960, 541)
+[node name="Frosting_drips" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_s02yw")
 animation = &"Drips"
 

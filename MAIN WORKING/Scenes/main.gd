@@ -4,17 +4,18 @@ extends Node3D
 @onready var albert: Node3D = $Albert
 @onready var albert_sound: AudioStreamPlayer3D = $Albert/Albert_sound
 @onready var fridge_sfx: AudioStreamPlayer3D = $Freezer_audio/Fridge_sfx
+@onready var pause_menu: Control = $Pause_Menu
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	albert.visible= true
-
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
+		
 #show albert and play audio
 func _on_al_collision_body_entered(body: Node3D) -> void:
 	albert.show()
